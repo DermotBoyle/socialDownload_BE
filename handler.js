@@ -1,11 +1,13 @@
-'use strict';
-const {getChrome} = require('./chrome-script')
-const puppeteer = require('puppeteer');
+
+  const {getChrome} = require('./chrome-script')
+  const puppeteer = require('puppeteer');
+
 
 
 // 'https://twitter.com/shanetodd/status/1493884291838787586'
 
 module.exports.getTwitterMedia = async (event, ctx, done) => {
+
 
   const {url: twitterUrl} = event.queryStringParameters;
   const regex = /(?:(?:https?|ftp):\/\/)?[\w\/\-?=%.]+\.[\w\/\-&?=%.]+/gm;
